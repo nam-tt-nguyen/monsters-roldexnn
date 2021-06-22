@@ -42,7 +42,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <h1>Monsters Rolodex - Created By Nam Nguyen</h1>
+        <h1>Monsters Rolodex - By Nam Nguyen</h1>
         <SearhBox 
           placeholder='search monster'
           handleChange={this.handleChange}
