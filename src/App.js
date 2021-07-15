@@ -11,6 +11,7 @@ class App extends Component {
     this.state = {
       monsters: [],
       searchField:''
+      // title: ''
     };
 
     // this.handleChange = this.handleChange.bind(this);
@@ -28,10 +29,12 @@ class App extends Component {
 
  handleChange = e => {
    this.setState({searchField: e.target.value});
+  //  this.setState({searchField: e.target.value, title: e.target.value});
  }
 
   render(){
-    const {monsters, searchField}= this.state;
+    // const {monsters, searchField}= this.state;
+    const {monsters, searchField, title}= this.state;
     // The above Destructuring equivalent to the following:
     // const monsters = this.state.monsters;
     // const searchField = this.state.searchField;
@@ -43,11 +46,13 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Monsters Rolodex - By Nam Nguyen</h1>
+        {/* <h1>{title}</h1> */}
         <SearhBox 
           placeholder='search monster'
           handleChange={this.handleChange}
         />
-        <CardList monsters={filteredMonsters}/>       
+        <CardList monsters={filteredMonsters}/>     
+        {/* <CardList monsters={monsters}/>       */}
       </div>
     );
   }
